@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  directory-watcher:
+    build: .
+    container_name: directory-watcher-bot
+    restart: unless-stopped
+    volumes:
+      - /percorso/da/controllare:/percorso/da/controllare:ro
+    tty: true
